@@ -27,25 +27,30 @@ namespace Star_Wars_Battle_For_Memes
 
         #region variables
         DispatcherTimer gameTimer = new DispatcherTimer(); //game main timer
+        List<Rectangle> itemRemover = new List<Rectangle>(); //list for removing items from canvas
         Random random = new Random();
-        int playerSpeed = 25;
-        int enemySpeed = 10;
-        int enemyCounter = 100;
-        int limit = 50;
-        int score = 0;
-        bool moveLeft, moveRight, moveUp, moveDown; //player controls
+
+        int playerSpeed = 25; //speed of the player
+        int enemySpeed = 10; //speed of the enemies
+        int enemyCounter = 100; //counter for enemies
+        int limit = 50; //limit of spawning enemies
+        int score = 0; 
+
+        bool moveLeft, moveRight, moveUp, moveDown; //player controls   
+        bool gameON = true; //game on switch
+
         Rect playerHitBox;
-        bool gameON = true;
-        List<Rectangle> itemRemover = new List<Rectangle>();
 
         #endregion
 
         public MainWindow()
         {
             InitializeComponent();
+
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             gameTimer.Tick += GameLoop;
-            gameTimer.Start();
+            gameTimer.Start(); //initializing main timer
+
             GameCanvas.Focus();
 
             //background settings
@@ -55,19 +60,21 @@ namespace Star_Wars_Battle_For_Memes
             bg.Viewport = new Rect(0, 0, 0.15, 0.15);
             bg.ViewportUnits = BrushMappingMode.RelativeToBoundingBox;
             GameCanvas.Background = bg;
+
         }
         private void GameLoop(object sender, EventArgs e) //main game loop
         {
             playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height); //hitbox of the player
             enemyCounter -= 1;
-            scoreText.Content = "SCORE: " + score;
+            scoreText.Content = "SCORE: " + score; //change score every tick
             if (enemyCounter < 0)
             {
-                MakeEnemies();
+                MakeEnemies(); //spawn enemies
                 enemyCounter = limit;
             }
 
             #region player movement
+
             if (moveLeft == true && Canvas.GetLeft(player) > 0)
             {
                 Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
@@ -84,22 +91,23 @@ namespace Star_Wars_Battle_For_Memes
             {
                 Canvas.SetTop(player, Canvas.GetTop(player) + playerSpeed);
             }
+
             #endregion
 
             foreach (var x in GameCanvas.Children.OfType<Rectangle>())
             {
-                if (x is Rectangle && (string)x.Tag == "bullet")
+                if (x is Rectangle && (string)x.Tag == "bullet") //bullet movement
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) - 30);
                     Rect bulletHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-                    if (Canvas.GetTop(x) < 70)
+                    if (Canvas.GetTop(x) < 70) 
                     {
-                        itemRemover.Add(x);
+                        itemRemover.Add(x); //delete bullets when they reach the end of screen
                     }
 
                     foreach (var y in GameCanvas.Children.OfType<Rectangle>())
                     {
-                        if (y is Rectangle && (string)y.Tag == "enemy")
+                        if (y is Rectangle && (string)y.Tag == "enemy") //shooting enemy
                         {
                             Rect enemyHit = new Rect(Canvas.GetLeft(y), Canvas.GetTop(y), y.Width, y.Height);
 
@@ -113,7 +121,7 @@ namespace Star_Wars_Battle_For_Memes
                         }                      
                     }
                 }
-                if (x is Rectangle && (string)x.Tag == "enemy")
+                if (x is Rectangle && (string)x.Tag == "enemy") //enemy movement
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) + enemySpeed);
 
@@ -124,10 +132,9 @@ namespace Star_Wars_Battle_For_Memes
 
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
 
-                    if (playerHitBox.IntersectsWith(enemyHitBox))
+                    if (playerHitBox.IntersectsWith(enemyHitBox)) //enemy touches player (future damage)
                     {
                         itemRemover.Add(x);
-                        //damage += 5;
                     }
                 }
 
@@ -135,13 +142,13 @@ namespace Star_Wars_Battle_For_Memes
             }
             foreach (Rectangle i in itemRemover)
             {
-                GameCanvas.Children.Remove(i);
+                GameCanvas.Children.Remove(i); //removing item from canvas
             }
 
         }
 
 
-
+        #region key config
         private void OnKeyDown(object sender, KeyEventArgs e)
         {
 
@@ -202,10 +209,11 @@ namespace Star_Wars_Battle_For_Memes
 
             }
         }
+        #endregion
 
-        private void MakeEnemies()
+        private void MakeEnemies() //make and randomize enemies
         {
-
+            //TO DO - randomize enemy sprites
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "enemy",
@@ -213,7 +221,7 @@ namespace Star_Wars_Battle_For_Memes
                 Width = 60,
                 Fill = Brushes.White
             };
-            Canvas.SetZIndex(newEnemy, 1);
+            Canvas.SetZIndex(newEnemy, 1); //enemies are under GUI
             Canvas.SetTop(newEnemy, -100);
             Canvas.SetLeft(newEnemy, random.Next(30, 630));
             GameCanvas.Children.Add(newEnemy);
