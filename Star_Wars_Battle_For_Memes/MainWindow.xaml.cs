@@ -24,5 +24,34 @@ namespace Star_Wars_Battle_For_Memes
         {
             InitializeComponent();
         }
+
+
+
+
+
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Left)
+            {
+                //moveLeft = true;
+            }
+            if (e.Key == Key.Right)
+            {
+                //moveRight = true;
+            }
+
+        }
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                //moveLeft = false;
+            }
+            if (e.Key == Key.Right)
+            {
+                //moveRight = false;
+            }
+        }
     }
 }

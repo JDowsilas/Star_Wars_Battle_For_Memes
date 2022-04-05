@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Star_Wars_Battle_For_Memes/1.0.0": {
+        "runtime": {
+          "Star_Wars_Battle_For_Memes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Star_Wars_Battle_For_Memes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
