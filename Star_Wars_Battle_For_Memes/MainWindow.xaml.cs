@@ -29,8 +29,14 @@ namespace Star_Wars_Battle_For_Memes
         DispatcherTimer gameTimer = new DispatcherTimer(); //game main timer
         Random random = new Random();
         int playerSpeed = 25;
+        int enemySpeed = 10;
+        int enemyCounter = 100;
+        int limit = 50;
+        int score = 0;
         bool moveLeft, moveRight, moveUp, moveDown; //player controls
         Rect playerHitBox;
+        bool gameON = true;
+        List<Rectangle> itemRemover = new List<Rectangle>();
 
         #endregion
 
@@ -53,7 +59,13 @@ namespace Star_Wars_Battle_For_Memes
         private void GameLoop(object sender, EventArgs e) //main game loop
         {
             playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height); //hitbox of the player
-
+            enemyCounter -= 1;
+            if (enemyCounter < 0)
+            {
+                MakeEnemies();
+                enemyCounter = limit;
+            }
+            #region player movement
             if (moveLeft == true && Canvas.GetLeft(player) > 0)
             {
                 Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
@@ -70,9 +82,60 @@ namespace Star_Wars_Battle_For_Memes
             {
                 Canvas.SetTop(player, Canvas.GetTop(player) + playerSpeed);
             }
+            #endregion
+            foreach (var x in GameCanvas.Children.OfType<Rectangle>())
+            {
+                if (x is Rectangle && (string)x.Tag == "bullet")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) - 30);
+                    Rect bulletHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (Canvas.GetTop(x) < 10)
+                    {
+                        itemRemover.Add(x);
+                    }
+
+                    foreach (var y in GameCanvas.Children.OfType<Rectangle>())
+                    {
+                        if (y is Rectangle && (string)y.Tag == "enemy")
+                        {
+                            Rect enemyHit = new Rect(Canvas.GetLeft(y), Canvas.GetTop(y), y.Width, y.Height);
+
+                            if (bulletHitBox.IntersectsWith(enemyHit))
+                            {
+                                itemRemover.Add(y);
+                                score++;
+                                itemRemover.Add(x);
+
+                            }
+                        }                      
+                    }
+                }
+                if (x is Rectangle && (string)x.Tag == "enemy")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + enemySpeed);
+
+                    if (Canvas.GetTop(x) > 850)
+                    {
+                        itemRemover.Add(x);
+                    }
+
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if (playerHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        itemRemover.Add(x);
+                        //damage += 5;
+                    }
+                }
+
+
+            }
+            foreach (Rectangle i in itemRemover)
+            {
+                GameCanvas.Children.Remove(i);
+            }
+
         }
-
-
 
 
 
@@ -115,6 +178,44 @@ namespace Star_Wars_Battle_For_Memes
             {
                 moveDown = false;
             }
+            if (e.Key == Key.Z)
+            {
+                if (gameON == true)
+                {
+
+                    Rectangle newBullet = new Rectangle
+                    {
+                        Tag = "bullet",
+                        Height = 20,
+                        Width = 5,
+                        Fill = Brushes.White,
+                        Stroke = Brushes.Red
+                    };
+
+                    Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+                    Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
+                    GameCanvas.Children.Add(newBullet);
+                }
+
+            }
         }
+
+        private void MakeEnemies()
+        {
+
+            Rectangle newEnemy = new Rectangle
+            {
+                Tag = "enemy",
+                Height = 60,
+                Width = 60,
+                Fill = Brushes.White
+            };
+
+            Canvas.SetTop(newEnemy, -100);
+            Canvas.SetLeft(newEnemy, random.Next(30, 630));
+            GameCanvas.Children.Add(newEnemy);
+
+        }
+
     }
 }
