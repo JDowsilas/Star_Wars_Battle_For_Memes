@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Windows.Media.Animation;
+using System.Media;
+using System.IO;
 
 namespace Star_Wars_Battle_For_Memes
 {
@@ -25,7 +28,7 @@ namespace Star_Wars_Battle_For_Memes
         #region variables
         DispatcherTimer gameTimer = new DispatcherTimer(); //game main timer
         Random random = new Random();
-
+        int playerSpeed = 25;
         bool moveLeft, moveRight, moveUp, moveDown; //player controls
         Rect playerHitBox;
 
@@ -36,12 +39,12 @@ namespace Star_Wars_Battle_For_Memes
             InitializeComponent();
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             gameTimer.Tick += GameLoop;
-
+            gameTimer.Start();
             GameCanvas.Focus();
 
-            //background
+            //background settings
             ImageBrush bg = new ImageBrush();
-            bg.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.png"));
+            bg.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"images\background.png"));
             bg.TileMode = TileMode.Tile;
             bg.Viewport = new Rect(0, 0, 0.15, 0.15);
             bg.ViewportUnits = BrushMappingMode.RelativeToBoundingBox;
@@ -49,7 +52,24 @@ namespace Star_Wars_Battle_For_Memes
         }
         private void GameLoop(object sender, EventArgs e) //main game loop
         {
+            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height); //hitbox of the player
 
+            if (moveLeft == true && Canvas.GetLeft(player) > 0)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
+            }
+            if (moveRight == true && Canvas.GetLeft(player) + 110 < Application.Current.MainWindow.Width)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
+            }
+            if (moveUp == true && Canvas.GetTop(player) > Application.Current.MainWindow.Height / 2)
+            {
+                Canvas.SetTop(player, Canvas.GetTop(player) - playerSpeed);
+            }
+            if (moveDown == true && Canvas.GetTop(player) + 120 < Application.Current.MainWindow.Height)
+            {
+                Canvas.SetTop(player, Canvas.GetTop(player) + playerSpeed);
+            }
         }
 
 
