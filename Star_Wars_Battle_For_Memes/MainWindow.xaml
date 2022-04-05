@@ -8,7 +8,9 @@
         Title="MainWindow" Height="815" Width="740">
     <Canvas Name="GameCanvas" Focusable="True" Background="Black" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
 
-        <Rectangle Name="player" Height="70" Width="80" Fill="Yellow" Canvas.Left="328" Canvas.Top="697" />
-        
+        <Label Canvas.ZIndex="3" Name="scoreText" Content="SCORE: 0" FontSize="15" FontWeight="Bold" Foreground="Black" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Canvas.ZIndex="1" Name="player" Height="70" Width="80" Fill="Yellow" Canvas.Left="328" Canvas.Top="697" />
+        <Rectangle Canvas.ZIndex="2"  Name="gui" Height="80" Width="740" Fill="DarkGray"/>
+
     </Canvas>
 </Window>

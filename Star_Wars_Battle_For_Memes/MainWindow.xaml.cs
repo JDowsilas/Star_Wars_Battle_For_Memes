@@ -60,11 +60,13 @@ namespace Star_Wars_Battle_For_Memes
         {
             playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height); //hitbox of the player
             enemyCounter -= 1;
+            scoreText.Content = "SCORE: " + score;
             if (enemyCounter < 0)
             {
                 MakeEnemies();
                 enemyCounter = limit;
             }
+
             #region player movement
             if (moveLeft == true && Canvas.GetLeft(player) > 0)
             {
@@ -74,7 +76,7 @@ namespace Star_Wars_Battle_For_Memes
             {
                 Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
             }
-            if (moveUp == true && Canvas.GetTop(player) > Application.Current.MainWindow.Height / 2)
+            if (moveUp == true && Canvas.GetTop(player) > Application.Current.MainWindow.Height / 2 + 100)
             {
                 Canvas.SetTop(player, Canvas.GetTop(player) - playerSpeed);
             }
@@ -83,13 +85,14 @@ namespace Star_Wars_Battle_For_Memes
                 Canvas.SetTop(player, Canvas.GetTop(player) + playerSpeed);
             }
             #endregion
+
             foreach (var x in GameCanvas.Children.OfType<Rectangle>())
             {
                 if (x is Rectangle && (string)x.Tag == "bullet")
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) - 30);
                     Rect bulletHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-                    if (Canvas.GetTop(x) < 10)
+                    if (Canvas.GetTop(x) < 70)
                     {
                         itemRemover.Add(x);
                     }
@@ -210,7 +213,7 @@ namespace Star_Wars_Battle_For_Memes
                 Width = 60,
                 Fill = Brushes.White
             };
-
+            Canvas.SetZIndex(newEnemy, 1);
             Canvas.SetTop(newEnemy, -100);
             Canvas.SetLeft(newEnemy, random.Next(30, 630));
             GameCanvas.Children.Add(newEnemy);
