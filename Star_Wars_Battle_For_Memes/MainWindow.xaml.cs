@@ -27,6 +27,8 @@ namespace Star_Wars_Battle_For_Memes
 
         #region variables
         DispatcherTimer gameTimer = new DispatcherTimer(); //game main timer
+        DispatcherTimer specialTimer = new DispatcherTimer(); // timer for special attack
+
         List<Rectangle> itemRemover = new List<Rectangle>(); //list for removing items from canvas
         Random random = new Random();
 
@@ -34,7 +36,8 @@ namespace Star_Wars_Battle_For_Memes
         int enemySpeed = 10; //speed of the enemies
         int enemyCounter = 100; //counter for enemies
         int limit = 50; //limit of spawning enemies
-        int score = 0; 
+        int score = 0;
+        int damage = 0;
 
         bool moveLeft, moveRight, moveUp, moveDown; //player controls   
         bool gameON = true; //game on switch
@@ -49,7 +52,9 @@ namespace Star_Wars_Battle_For_Memes
 
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             gameTimer.Tick += GameLoop;
-            gameTimer.Start(); //initializing main timer
+
+            specialTimer.Interval = TimeSpan.FromMilliseconds(150);
+            specialTimer.Tick += SpecialCritLoop;
 
             GameCanvas.Focus();
 
@@ -60,6 +65,15 @@ namespace Star_Wars_Battle_For_Memes
             bg.Viewport = new Rect(0, 0, 0.15, 0.15);
             bg.ViewportUnits = BrushMappingMode.RelativeToBoundingBox;
             GameCanvas.Background = bg;
+
+            player.Visibility = Visibility.Hidden;
+            gameOverLabel.Visibility = Visibility.Hidden;
+            gui.Visibility = Visibility.Hidden;
+            scoreText.Visibility = Visibility.Hidden;
+            hpLabel.Visibility = Visibility.Hidden;
+            hpBar.Visibility = Visibility.Hidden;
+            specialLabel.Visibility = Visibility.Hidden;
+            specialBar.Visibility = Visibility.Hidden;
 
         }
         private void GameLoop(object sender, EventArgs e) //main game loop
@@ -113,10 +127,9 @@ namespace Star_Wars_Battle_For_Memes
 
                             if (bulletHitBox.IntersectsWith(enemyHit))
                             {
-                                itemRemover.Add(y);
-                                score++;
+                                itemRemover.Add(y);                           
                                 itemRemover.Add(x);
-
+                                score++;
                             }
                         }                      
                     }
@@ -135,9 +148,18 @@ namespace Star_Wars_Battle_For_Memes
                     if (playerHitBox.IntersectsWith(enemyHitBox)) //enemy touches player (future damage)
                     {
                         itemRemover.Add(x);
+                        damage += 10;
+                        hpBar.Width -= 10;
                     }
                 }
-
+            }
+            if(damage > 199)
+            {
+                gameOverLabel.Visibility = Visibility.Visible;
+                gameTimer.Stop();
+                MessageBox.Show("YOU HAVE LOST" + Environment.NewLine + "click OK to try again", "GAME OVER");
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
 
             }
             foreach (Rectangle i in itemRemover)
@@ -146,7 +168,29 @@ namespace Star_Wars_Battle_For_Memes
             }
 
         }
+        private void SpecialCritLoop(object sender, EventArgs e)
+        {
+            if (specialBar.Width < 200)
+            {
+                specialBar.Width++;
+            }
+        }
 
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            gameTimer.Start();
+            specialTimer.Start();
+            introText.Visibility = Visibility.Hidden;
+            player.Visibility = Visibility.Visible;
+            gui.Visibility = Visibility.Visible;
+            scoreText.Visibility = Visibility.Visible;
+            hpLabel.Visibility = Visibility.Visible;
+            hpBar.Visibility = Visibility.Visible;
+            specialLabel.Visibility = Visibility.Visible;
+            specialBar.Visibility = Visibility.Visible;
+            startButton.Visibility = Visibility.Hidden;
+
+        }
 
         #region key config
         private void OnKeyDown(object sender, KeyEventArgs e)
