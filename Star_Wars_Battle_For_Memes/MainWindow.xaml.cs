@@ -45,7 +45,9 @@ namespace Star_Wars_Battle_For_Memes
         Rect playerHitBox;
 
         #endregion
-
+        int enemySpriteCounter = 0;
+        int enemyHP = 1;
+        Random rand = new Random();
         public MainWindow()
         {
             InitializeComponent();
@@ -65,6 +67,12 @@ namespace Star_Wars_Battle_For_Memes
             bg.Viewport = new Rect(0, 0, 0.15, 0.15);
             bg.ViewportUnits = BrushMappingMode.RelativeToBoundingBox;
             GameCanvas.Background = bg;
+
+            // player
+            ImageBrush playerImage = new ImageBrush();
+            playerImage.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"images\Sokol.gif"));
+            player.Fill = playerImage;
+            
 
             player.Visibility = Visibility.Hidden;
             gameOverLabel.Visibility = Visibility.Hidden;
@@ -175,7 +183,7 @@ namespace Star_Wars_Battle_For_Memes
                 specialBar.Width++;
             }
         }
-
+        
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
             gameTimer.Start();
@@ -257,13 +265,27 @@ namespace Star_Wars_Battle_For_Memes
 
         private void MakeEnemies() //make and randomize enemies
         {
-            //TO DO - randomize enemy sprites
+            
+            ImageBrush enemySprite = new ImageBrush();
+            enemySpriteCounter = rand.Next(1, 3);
+            switch (enemySpriteCounter)
+            {
+                case 1:
+                    enemySprite.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"images\Imperium.gif"));
+                    enemyHP = 5;
+                    break;
+                case 2:
+                    enemySprite.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"images\MiniBossKappa.gif"));
+                    enemyHP = 2;
+                    break;
+            }
+
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "enemy",
                 Height = 60,
                 Width = 60,
-                Fill = Brushes.White
+                Fill = enemySprite,
             };
             Canvas.SetZIndex(newEnemy, 1); //enemies are under GUI
             Canvas.SetTop(newEnemy, -100);

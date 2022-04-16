@@ -9,10 +9,16 @@
 
   <ItemGroup>
     <None Remove="images\background.png" />
+    <None Remove="images\Imperium.gif" />
+    <None Remove="images\MiniBossKappa.gif" />
+    <None Remove="images\Sokol.gif" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\background.png" />
+    <Resource Include="images\Imperium.gif" />
+    <Resource Include="images\MiniBossKappa.gif" />
+    <Resource Include="images\Sokol.gif" />
   </ItemGroup>
 
 </Project>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julidow\\Desktop\\Dokumenty na studia\\PAzIG\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj": {}
+    "D:\\S T U D I A 6\\PAzIG\\SW\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julidow\\Desktop\\Dokumenty na studia\\PAzIG\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj": {
+    "D:\\S T U D I A 6\\PAzIG\\SW\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julidow\\Desktop\\Dokumenty na studia\\PAzIG\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj",
+        "projectUniqueName": "D:\\S T U D I A 6\\PAzIG\\SW\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj",
         "projectName": "Star_Wars_Battle_For_Memes",
-        "projectPath": "C:\\Users\\julidow\\Desktop\\Dokumenty na studia\\PAzIG\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj",
-        "packagesPath": "C:\\Users\\julidow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julidow\\Desktop\\Dokumenty na studia\\PAzIG\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes\\obj\\",
+        "projectPath": "D:\\S T U D I A 6\\PAzIG\\SW\\Star_Wars_Battle_For_Memes\\Star_Wars_Battle_For_Memes.csproj",
+        "packagesPath": "C:\\Users\\kubak\\.nuget\\packages\\",
+        "outputPath": "D:\\S T U D I A 6\\PAzIG\\SW\\Star_Wars_Battle_For_Memes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julidow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kubak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
