@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\App.xaml
-11407045341
+3-1481060554
 
-3-1233169557
+5279202964
 1941645785384
-MainWindow.xaml;
+gameover.xaml;MainWindow.xaml;playerSummary.xaml;
 
 True
 

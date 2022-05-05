@@ -152,14 +152,81 @@ namespace Star_Wars_Battle_For_Memes
                         hpBar.Width -= 10;
                     }
                 }
+                if (x is Rectangle && (string)x.Tag == "specialbullet")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) - 10);
+                    Rect specialHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (Canvas.GetTop(x) < 10)
+                    {
+                        itemRemover.Add(x);
+                    }
+
+                    foreach (var y in GameCanvas.Children.OfType<Rectangle>())
+                    {
+                        if (y is Rectangle && (string)y.Tag == "enemy")
+                        {
+                            Rect enemyspecialHit = new Rect(Canvas.GetLeft(y), Canvas.GetTop(y), y.Width, y.Height);
+
+                            if (specialHitBox.IntersectsWith(enemyspecialHit))
+                            {
+                                itemRemover.Add(y);
+                                score++;
+                            }
+                        }
+
+                    }
+                }
             }
-            if(damage > 199)
+            #region players speed
+            if (score > 5)
+            {
+                limit = 20;
+                enemySpeed = 11;
+            }
+            if (score > 10)
+            {
+                limit = 25;
+                enemySpeed = 12;
+            }
+            if (score > 20)
+            {
+                limit = 25;
+                enemySpeed = 13;
+            }
+            if (score > 25)
+            {
+                limit = 25;
+                enemySpeed = 14;
+            }
+            if (score > 30)
+            {
+                limit = 20;
+                enemySpeed = 15;
+            }
+            if (score > 40)
+            {
+                limit = 20;
+                enemySpeed = 16;
+            }
+            if (score > 50)
+            {
+                limit = 15;
+                enemySpeed = 17;
+            }
+            if (score > 60)
+            {
+                limit = 10;
+                enemySpeed = 20;
+            }
+            #endregion
+
+            if (damage > 199)
             {
                 gameOverLabel.Visibility = Visibility.Visible;
                 gameTimer.Stop();
-                MessageBox.Show("YOU HAVE LOST" + Environment.NewLine + "click OK to try again", "GAME OVER");
-                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-                Application.Current.Shutdown();
+                GameOver();
+                //MessageBox.Show("YOU HAVE LOST" + Environment.NewLine + "click OK to try again", "GAME OVER");
+                
 
             }
             foreach (Rectangle i in itemRemover)
@@ -175,12 +242,11 @@ namespace Star_Wars_Battle_For_Memes
                 specialBar.Width++;
             }
         }
-
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
             gameTimer.Start();
             specialTimer.Start();
-            introText.Visibility = Visibility.Hidden;
+            
             player.Visibility = Visibility.Visible;
             gui.Visibility = Visibility.Visible;
             scoreText.Visibility = Visibility.Visible;
@@ -188,12 +254,22 @@ namespace Star_Wars_Battle_For_Memes
             hpBar.Visibility = Visibility.Visible;
             specialLabel.Visibility = Visibility.Visible;
             specialBar.Visibility = Visibility.Visible;
+
             startButton.Visibility = Visibility.Hidden;
+            introText.Visibility = Visibility.Hidden;
 
         }
 
+        private void GameOver()
+        {
+            Star_Wars_Battle_For_Memes.playerSummary ps = new Star_Wars_Battle_For_Memes.playerSummary();
+            ps.Show();
+            ps.finalScoreLabel.Content = "YOUR SCORE: " + score;
+            
+        }
+
         #region key config
-        private void OnKeyDown(object sender, KeyEventArgs e)
+        private void OnKeyDown(object sender, KeyEventArgs e)   
         {
 
             if (e.Key == Key.Left)
@@ -251,6 +327,24 @@ namespace Star_Wars_Battle_For_Memes
                     GameCanvas.Children.Add(newBullet);
                 }
 
+            }if(e.Key == Key.X)
+            {
+                if (specialBar.Width == 200)
+                {
+                    Rectangle newSpecial = new Rectangle
+                    {
+                        Tag = "specialbullet",
+                        Height = 15,
+                        Width = 740,
+                        Fill = Brushes.Red,
+                        Stroke = Brushes.White
+
+                    };
+                    Canvas.SetLeft(newSpecial, 0);
+                    Canvas.SetTop(newSpecial, Canvas.GetTop(player) - newSpecial.Height);
+                    GameCanvas.Children.Add(newSpecial);
+                    specialBar.Width = 1;
+                }
             }
         }
         #endregion

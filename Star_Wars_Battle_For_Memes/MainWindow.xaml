@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Star_Wars_Battle_For_Memes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="815" Width="740" ResizeMode="NoResize">
+        Title="MainWindow" Height="815" Width="740" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Canvas Name="GameCanvas" Focusable="True" Background="Black" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
 
         <Label Canvas.ZIndex="3" Name="scoreText" Content="SCORE: 0" FontSize="20" FontWeight="Bold" Foreground="Black" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />

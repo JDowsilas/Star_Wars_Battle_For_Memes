@@ -19,3 +19,5 @@ C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\St
 C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
 C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.genruntimeconfig.cache
 C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\ref\Star_Wars_Battle_For_Memes.dll
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\playerSummary.g.cs
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\playerSummary.baml
