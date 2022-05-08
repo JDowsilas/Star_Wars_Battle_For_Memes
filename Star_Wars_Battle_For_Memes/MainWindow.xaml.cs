@@ -57,7 +57,7 @@ namespace Star_Wars_Battle_For_Memes
             specialTimer.Tick += SpecialCritLoop;
 
             GameCanvas.Focus();
-            sp = new SoundPlayer(@"music\theme.wav");
+            sp = new SoundPlayer("theme.wav");
             sp.PlayLooping();
             //background settings
             ImageBrush bg = new ImageBrush();
@@ -263,10 +263,10 @@ namespace Star_Wars_Battle_For_Memes
 
         private void GameOver()
         {
+            sp.Stop();
             Star_Wars_Battle_For_Memes.playerSummary ps = new Star_Wars_Battle_For_Memes.playerSummary();
             ps.Show();
-            ps.finalScoreLabel.Content = "YOUR SCORE: " + score;
-            
+            ps.finalScoreLabel.Content = "YOUR SCORE: " + score;         
         }
 
         #region key config

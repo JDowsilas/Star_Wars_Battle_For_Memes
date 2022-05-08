@@ -14,7 +14,9 @@
 
   <ItemGroup>
     <Resource Include="images\background.png" />
-    <Resource Include="music\theme.wav" />
+    <Content Include="music\theme.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
