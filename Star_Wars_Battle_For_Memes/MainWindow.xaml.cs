@@ -28,7 +28,7 @@ namespace Star_Wars_Battle_For_Memes
         #region variables
         DispatcherTimer gameTimer = new DispatcherTimer(); //game main timer
         DispatcherTimer specialTimer = new DispatcherTimer(); // timer for special attack
-
+        SoundPlayer sp;
         List<Rectangle> itemRemover = new List<Rectangle>(); //list for removing items from canvas
         Random random = new Random();
 
@@ -57,7 +57,8 @@ namespace Star_Wars_Battle_For_Memes
             specialTimer.Tick += SpecialCritLoop;
 
             GameCanvas.Focus();
-
+            sp = new SoundPlayer(@"music\theme.wav");
+            sp.PlayLooping();
             //background settings
             ImageBrush bg = new ImageBrush();
             bg.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"images\background.png"));

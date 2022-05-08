@@ -8,16 +8,98 @@
         Title="MainWindow" Height="815" Width="740" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Canvas Name="GameCanvas" Focusable="True" Background="Black" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
 
-        <Label Canvas.ZIndex="3" Name="scoreText" Content="SCORE: 0" FontSize="20" FontWeight="Bold" Foreground="Black" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Label Canvas.ZIndex="3" Name="scoreText" Content="SCORE: 0" FontSize="20" FontWeight="Bold" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Gainsboro" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
         <Rectangle Canvas.ZIndex="1" Name="player" Height="70" Width="80" Fill="Yellow" Canvas.Left="328" Canvas.Top="697" />
-        <Rectangle Canvas.ZIndex="2"  Name="gui" Height="80" Width="725" Fill="DarkGray" Stroke="DarkRed" StrokeThickness="7"/>
-        <Label Canvas.ZIndex="3" Name="hpLabel" FontSize="15" Content="HP:" Canvas.Left="476" Canvas.Top="13" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <Rectangle Canvas.ZIndex="3"  Name="hpBar" Height="22" Width="200" Fill="Green" Canvas.Left="511" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Canvas.ZIndex="3" Name="specialLabel" FontSize="15" Content="SPECIAL ATTACK:" Canvas.Left="379" Canvas.Top="40" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Rectangle Canvas.ZIndex="3"  Name="specialBar" Height="22" Width="1" Fill="DarkCyan" Canvas.Left="511" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Canvas.ZIndex="3" Name="gameOverLabel" FontSize="50" Content="GAME OVER" Canvas.Left="220" Canvas.Top="323" FontWeight="Bold" Foreground="Red"/>
-        <Button x:Name="startButton" Content="START GAME" Canvas.Left="229" Canvas.Top="323" Background="Black" FontWeight="Bold" BorderBrush="Red" BorderThickness="5" Height="81" Width="282" Foreground="Red" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Click="startButton_Click"/>
-        <TextBlock Name ="introText" Canvas.ZIndex ="3" Foreground="Red" Canvas.Left="134" Canvas.Top="96" Height="146" Width="454" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontStyle="Normal" TextDecorations="{x:Null}">
+        <Rectangle Canvas.ZIndex="2"  Name="gui" Height="80" Width="725" StrokeThickness="7">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF310000" Offset="1"/>
+                    <GradientStop Color="#FF5D2727"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF693939" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Canvas.ZIndex="3" Name="hpLabel" FontSize="15" Content="HP:" Canvas.Left="476" Canvas.Top="13" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.287"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Rectangle Canvas.ZIndex="3"  Name="hpBar" Height="22" Width="200" Canvas.Left="511" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF0808" Offset="0.53"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Canvas.ZIndex="3" Name="specialLabel" FontSize="15" Content="SPECIAL ATTACK:" Canvas.Left="379" Canvas.Top="40" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF2828" Offset="0.537"/>
+                    <GradientStop Color="#FFC61F1F" Offset="0.467"/>
+                    <GradientStop Color="#FFA41919" Offset="0.313"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Rectangle Canvas.ZIndex="3"  Name="specialBar" Height="22" Width="1" Canvas.Left="511" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF30FFC1" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Canvas.ZIndex="3" Name="gameOverLabel" FontSize="50" Content="GAME OVER" Canvas.Left="220" Canvas.Top="323" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDC3737" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="startButton" Content="START GAME" Canvas.Left="229" Canvas.Top="323" FontWeight="Bold" BorderThickness="5" Height="81" Width="282" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Click="startButton_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF888888" Offset="0.22"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF4F4F" Offset="0.46"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF752B2B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Name ="introText" Canvas.ZIndex ="3" Canvas.Left="134" Canvas.Top="96" Height="146" Width="454" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontStyle="Normal" TextDecorations="{x:Null}">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
             STAR WARS<LineBreak/>BATTLE FOR MEMES
         </TextBlock>
 

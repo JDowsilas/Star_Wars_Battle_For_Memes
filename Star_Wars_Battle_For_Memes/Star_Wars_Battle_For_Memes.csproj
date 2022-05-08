@@ -9,10 +9,12 @@
 
   <ItemGroup>
     <None Remove="images\background.png" />
+    <None Remove="music\theme.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\background.png" />
+    <Resource Include="music\theme.wav" />
   </ItemGroup>
 
 </Project>

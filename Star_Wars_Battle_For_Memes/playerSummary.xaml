@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Star_Wars_Battle_For_Memes"
         mc:Ignorable="d"
-        Title="playerSummary" Height="200" Width="360" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="playerSummary" Height="300" Width="520" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,0">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,11 +13,54 @@
                 <GradientStop Color="#FFC13D3D" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="218,131,0,0" VerticalAlignment="Top" Click="submitButton_Click" Background="#FF461313" Foreground="#FFE0D3D3" BorderBrush="#FFD80D0D"/>
-        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Margin="93,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="#FFC86060"/>
-        <Label Content="Input your username:" HorizontalAlignment="Left" Margin="90,105,0,0" VerticalAlignment="Top" Foreground="#FFFF5A5A"/>
-        <Label Content="GAME OVER" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFA22424"/>
-        <Label Name="finalScoreLabel" Content="YOUR SCORE: " HorizontalAlignment="Left" Margin="120,57,0,0" VerticalAlignment="Top" Foreground="#FFFF5151"/>
+        <Button Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="287,177,0,0" VerticalAlignment="Top" Click="submitButton_Click" BorderBrush="#FFD80D0D" Height="29" Width="63" FontSize="16">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFC80909" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Margin="162,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="#FFC86060" FontSize="20"/>
+        <Label Content="Input your username:" HorizontalAlignment="Center" Margin="0,143,0,0" VerticalAlignment="Top" FontSize="18">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.657"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="GAME OVER" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Name="finalScoreLabel" Content="YOUR SCORE: " HorizontalAlignment="Left" Margin="146,82,0,0" VerticalAlignment="Top" FontSize="20">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF4444" Offset="0.51"/>
+                    <GradientStop Color="#FF822222" Offset="0.26"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="by Juliusz Dowsilas and Jakub Pawelak" HorizontalAlignment="Left" Margin="299,264,0,0" VerticalAlignment="Top" FontStyle="Normal" FontWeight="Normal">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF444444"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
 
     </Grid>
 </Window>
