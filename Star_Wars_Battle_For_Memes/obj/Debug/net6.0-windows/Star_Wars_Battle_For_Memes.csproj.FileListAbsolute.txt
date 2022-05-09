@@ -1,24 +1,3 @@
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.exe
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.deps.json
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.runtimeconfig.json
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.dll
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.csproj.AssemblyReference.cache
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes_MarkupCompile.cache
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes_MarkupCompile.lref
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.g.resources
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.AssemblyInfoInputs.cache
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.AssemblyInfo.cs
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.csproj.CoreCompileInputs.cache
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.dll
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\refint\Star_Wars_Battle_For_Memes.dll
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.genruntimeconfig.cache
-C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\ref\Star_Wars_Battle_For_Memes.dll
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.csproj.AssemblyReference.cache
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\App.g.cs
@@ -40,3 +19,24 @@ D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\St
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.genruntimeconfig.cache
 D:\S T U D I A 6\PAzIG\SW\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\ref\Star_Wars_Battle_For_Memes.dll
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.exe
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.deps.json
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.runtimeconfig.json
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.dll
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\bin\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.csproj.AssemblyReference.cache
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes_MarkupCompile.cache
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes_MarkupCompile.lref
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.g.resources
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.AssemblyInfoInputs.cache
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.AssemblyInfo.cs
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.csproj.CoreCompileInputs.cache
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.dll
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\refint\Star_Wars_Battle_For_Memes.dll
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.pdb
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\Star_Wars_Battle_For_Memes.genruntimeconfig.cache
+C:\Users\julidow\Desktop\Dokumenty na studia\PAzIG\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\Star_Wars_Battle_For_Memes\obj\Debug\net6.0-windows\ref\Star_Wars_Battle_For_Memes.dll
