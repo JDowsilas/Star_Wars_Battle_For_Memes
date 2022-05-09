@@ -178,7 +178,7 @@ namespace Star_Wars_Battle_For_Memes
                     }
                 }
             }
-            #region players speed
+            #region enemy speed
             if (score > 5)
             {
                 limit = 20;
@@ -226,9 +226,6 @@ namespace Star_Wars_Battle_For_Memes
                 gameOverLabel.Visibility = Visibility.Visible;
                 gameTimer.Stop();
                 GameOver();
-                //MessageBox.Show("YOU HAVE LOST" + Environment.NewLine + "click OK to try again", "GAME OVER");
-                
-
             }
             foreach (Rectangle i in itemRemover)
             {
@@ -264,6 +261,8 @@ namespace Star_Wars_Battle_For_Memes
         private void GameOver()
         {
             sp.Stop();
+            sp = new SoundPlayer("game_over.wav");
+            sp.Play();
             Star_Wars_Battle_For_Memes.playerSummary ps = new Star_Wars_Battle_For_Memes.playerSummary();
             ps.Show();
             ps.finalScoreLabel.Content = "YOUR SCORE: " + score;         

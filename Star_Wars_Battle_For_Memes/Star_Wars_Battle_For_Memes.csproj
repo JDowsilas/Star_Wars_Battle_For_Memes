@@ -9,11 +9,15 @@
 
   <ItemGroup>
     <None Remove="images\background.png" />
+    <None Remove="music\game_over.wav" />
     <None Remove="music\theme.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\background.png" />
+    <Content Include="music\game_over.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="music\theme.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

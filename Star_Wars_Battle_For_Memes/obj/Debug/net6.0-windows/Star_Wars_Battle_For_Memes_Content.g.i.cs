@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("music/game_over.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("music/theme.wav")]
 
 
