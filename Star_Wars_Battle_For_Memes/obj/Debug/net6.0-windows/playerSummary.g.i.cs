@@ -77,7 +77,7 @@ namespace Star_Wars_Battle_For_Memes {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Star_Wars_Battle_For_Memes;component/playersummary.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Star_Wars_Battle_For_Memes;V1.0.0.0;component/playersummary.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\playerSummary.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
